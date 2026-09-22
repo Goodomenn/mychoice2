@@ -6,25 +6,14 @@ import {
   Sparkles, 
   ArrowRight, 
   ShieldCheck, 
-  Globe2, 
-  TrendingUp, 
   Truck, 
   CheckCircle2, 
   Package, 
   Layers, 
-  Award, 
   Users 
 } from 'lucide-react';
 
 export default function Home() {
-
-  const stats = [
-    { value: '15+', label: 'Years in Global Trade', icon: Award },
-    { value: '35+', label: 'Countries Exported To', icon: Globe2 },
-    { value: '50K+', label: 'Metric Tons Annual Capacity', icon: TrendingUp },
-    { value: '100%', label: 'Certified Traceability', icon: ShieldCheck },
-  ];
-
   const exportProducts = [
     {
       title: 'Premium Green Coffee Beans',
@@ -205,59 +194,6 @@ export default function Home() {
                 Request Trade Quotation
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= STATS BANNER ================= */}
-      <section style={{ padding: '2rem 0', position: 'relative', zIndex: 20 }}>
-        <div className="container">
-          <div
-            className="glass-panel"
-            style={{
-              padding: '2.5rem 2rem',
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-              gap: '2rem',
-              textAlign: 'center',
-            }}
-          >
-            {stats.map((stat, i) => {
-              const IconComp = stat.icon;
-              return (
-                <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <div
-                    style={{
-                      width: '48px',
-                      height: '48px',
-                      borderRadius: '12px',
-                      background: 'rgba(255, 255, 255, 0.08)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      marginBottom: '0.75rem',
-                      border: '1px solid rgba(255, 255, 255, 0.15)',
-                    }}
-                  >
-                    <IconComp size={22} color="#f59e0b" />
-                  </div>
-                  <div
-                    style={{
-                      fontSize: '2.5rem',
-                      fontWeight: '800',
-                      fontFamily: 'var(--font-heading)',
-                      color: '#ffffff',
-                      lineHeight: '1.1',
-                    }}
-                  >
-                    {stat.value}
-                  </div>
-                  <div style={{ color: '#94a3b8', fontSize: '0.9rem', marginTop: '0.35rem', fontWeight: '500' }}>
-                    {stat.label}
-                  </div>
-                </div>
-              );
-            })}
           </div>
         </div>
       </section>
