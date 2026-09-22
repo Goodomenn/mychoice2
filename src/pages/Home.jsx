@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Coffee, 
@@ -10,8 +10,6 @@ import {
   TrendingUp, 
   Truck, 
   CheckCircle2, 
-  Play, 
-  X,
   Package, 
   Layers, 
   Award, 
@@ -19,7 +17,6 @@ import {
 } from 'lucide-react';
 
 export default function Home() {
-  const [videoModalOpen, setVideoModalOpen] = useState(false);
 
   const stats = [
     { value: '15+', label: 'Years in Global Trade', icon: Award },
@@ -207,18 +204,6 @@ export default function Home() {
               <Link to="/contact" className="glass-button glass-button-secondary">
                 Request Trade Quotation
               </Link>
-
-              <button
-                onClick={() => setVideoModalOpen(true)}
-                className="glass-button"
-                style={{
-                  background: 'rgba(21, 128, 61, 0.4)',
-                  border: '1px solid rgba(134, 239, 172, 0.4)',
-                  color: '#ffffff',
-                }}
-              >
-                <Play size={16} color="#86efac" style={{ fill: '#86efac' }} /> Corporate Overview
-              </button>
             </div>
           </div>
         </div>
@@ -603,95 +588,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= CORPORATE VIDEO MODAL ================= */}
-      {videoModalOpen && (
-        <div
-          style={{
-            position: 'fixed',
-            inset: 0,
-            zIndex: 100,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            background: 'rgba(0, 0, 0, 0.85)',
-            backdropFilter: 'blur(12px)',
-            WebkitBackdropFilter: 'blur(12px)',
-            padding: '1.5rem',
-          }}
-        >
-          <div
-            className="glass-panel"
-            style={{
-              position: 'relative',
-              width: '100%',
-              maxWidth: '850px',
-              padding: '1.5rem',
-              background: '#090d16',
-              border: '2px solid rgba(34, 197, 94, 0.4)',
-              borderRadius: '1.5rem',
-            }}
-          >
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <Sparkles size={18} color="#22c55e" />
-                <span style={{ fontWeight: '700', color: '#ffffff' }}>Access Ethiopia Corporate Overview</span>
-              </div>
-              <button
-                onClick={() => setVideoModalOpen(false)}
-                style={{
-                  color: '#ef4444',
-                  fontSize: '1.5rem',
-                  fontWeight: '800',
-                  padding: '0.25rem 0.5rem',
-                  borderRadius: '0.5rem',
-                  background: 'rgba(239, 68, 68, 0.1)',
-                }}
-              >
-                <X size={20} />
-              </button>
-            </div>
-
-            <div
-              style={{
-                position: 'relative',
-                paddingBottom: '56.25%',
-                height: 0,
-                overflow: 'hidden',
-                borderRadius: '0.75rem',
-                background: '#0f172a',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              <div
-                style={{
-                  position: 'absolute',
-                  inset: 0,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '1rem',
-                  padding: '2rem',
-                  textAlign: 'center',
-                  background: 'linear-gradient(135deg, rgba(21, 128, 61, 0.3), rgba(15, 23, 42, 0.9))',
-                }}
-              >
-                <Coffee size={48} color="#22c55e" />
-                <h3 style={{ color: '#ffffff', fontSize: '1.35rem', fontWeight: '700' }}>
-                  Authentic Ethiopian Coffee & Commodity Processing
-                </h3>
-                <p style={{ color: '#94a3b8', maxWidth: '500px', fontSize: '0.9rem' }}>
-                  From the high altitude washing stations of Sidama and Guji to the cleaning facilities in Addis Ababa,
-                  experience our dedication to exceptional quality.
-                </p>
-                <div className="glass-badge">Video Tour Preview</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
