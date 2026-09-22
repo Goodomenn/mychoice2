@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { 
   MapPin, 
   Phone, 
@@ -8,20 +9,30 @@ import {
   CheckCircle2, 
   MessageSquare, 
   Building, 
-  Sparkles,
-  Globe2
+  Sparkles, 
+  Globe2 
 } from 'lucide-react';
 
 export default function Contact() {
+  const [searchParams] = useSearchParams();
+  const initialProduct = searchParams.get('product') || 'Nihug (Ethiopian Niger Seed)';
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     country: '',
-    inquiryType: 'Green Coffee Beans',
+    inquiryType: initialProduct,
     volume: '',
     message: '',
   });
+
+  useEffect(() => {
+    const prod = searchParams.get('product');
+    if (prod) {
+      setFormData((prev) => ({ ...prev, inquiryType: prod }));
+    }
+  }, [searchParams]);
 
   const [submitted, setSubmitted] = useState(false);
 
@@ -360,20 +371,23 @@ export default function Contact() {
                         className="glass-input"
                         style={{ cursor: 'pointer' }}
                       >
-                        <option value="Green Coffee Beans" style={{ background: '#0f172a', color: '#ffffff' }}>
-                          Green Coffee Beans (Sidama, Yirgacheffe, Guji, Harar)
+                        <option value="Nihug (Ethiopian Niger Seed)" style={{ background: '#0f172a', color: '#ffffff' }}>
+                          Nihug (Ethiopian Niger Seed / ኑግ)
                         </option>
-                        <option value="Oilseeds & Sesame" style={{ background: '#0f172a', color: '#ffffff' }}>
-                          High-Grade Oilseeds (Humera / Wollega White Sesame, Niger)
+                        <option value="Corn (Ethiopian Maize)" style={{ background: '#0f172a', color: '#ffffff' }}>
+                          Corn (Ethiopian Maize / በቆሎ)
                         </option>
-                        <option value="Pulses & Legumes" style={{ background: '#0f172a', color: '#ffffff' }}>
-                          Nutritious Pulses (Chickpeas, Kidney Beans, Lentils)
+                        <option value="Raw Cotton (Ginned Lint)" style={{ background: '#0f172a', color: '#ffffff' }}>
+                          Raw Cotton (Ginned Lint / ጥጥ)
                         </option>
-                        <option value="Ethiopian Spices" style={{ background: '#0f172a', color: '#ffffff' }}>
-                          Authentic Ethiopian Spices (Ginger, Turmeric, Cardamom)
+                        <option value="Green Gram (Mung Bean)" style={{ background: '#0f172a', color: '#ffffff' }}>
+                          Green Gram (Mung Bean / ማሾ)
+                        </option>
+                        <option value="Sorghum (Highland Sorghum)" style={{ background: '#0f172a', color: '#ffffff' }}>
+                          Sorghum (Highland Sorghum / ማሽላ)
                         </option>
                         <option value="Import Division Partnership" style={{ background: '#0f172a', color: '#ffffff' }}>
-                          Import Partnership (Chemicals, Ceramics, Medicals)
+                          Import Division Partnership
                         </option>
                         <option value="General Trade Consultation" style={{ background: '#0f172a', color: '#ffffff' }}>
                           General Trade Consultation
