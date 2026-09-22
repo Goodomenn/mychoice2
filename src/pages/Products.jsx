@@ -1,13 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Check, 
   ArrowRight, 
   Sparkles, 
   ShieldCheck, 
-  Package, 
-  Layers, 
-  Globe2,
   FileText
 } from 'lucide-react';
 
@@ -376,67 +372,6 @@ export default function Products() {
                       <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.75', margin: 0 }}>
                         {item.explanation}
                       </p>
-                    </div>
-
-                    {/* Technical Specifications Grid */}
-                    <div
-                      style={{
-                        background: 'rgba(15, 23, 42, 0.65)',
-                        border: '1px solid rgba(255, 255, 255, 0.09)',
-                        borderRadius: '0.9rem',
-                        padding: '1.25rem 1.5rem',
-                        marginBottom: '1.75rem',
-                      }}
-                    >
-                      <div
-                        style={{
-                          fontSize: '0.8rem',
-                          textTransform: 'uppercase',
-                          fontWeight: '700',
-                          color: '#ffffff',
-                          letterSpacing: '0.05em',
-                          marginBottom: '0.85rem',
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '0.4rem',
-                        }}
-                      >
-                        <Layers size={15} color="#38bdf8" /> Export Standards & Specifications
-                      </div>
-                      <div
-                        style={{
-                          display: 'grid',
-                          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                          gap: '0.65rem 1.25rem',
-                        }}
-                      >
-                        {item.specs.map((spec, i) => (
-                          <div key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '0.45rem', fontSize: '0.875rem' }}>
-                            <Check size={14} color="#22c55e" style={{ flexShrink: 0, marginTop: '3px' }} />
-                            <div>
-                              <span style={{ color: '#94a3b8' }}>{spec.label}: </span>
-                              <strong style={{ color: '#f8fafc' }}>{spec.value}</strong>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Packaging info */}
-                      <div
-                        style={{
-                          marginTop: '0.85rem',
-                          paddingTop: '0.75rem',
-                          borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-                          fontSize: '0.825rem',
-                          color: '#94a3b8',
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '0.45rem',
-                        }}
-                      >
-                        <Package size={14} color="#f59e0b" style={{ flexShrink: 0 }} />
-                        <span><strong>Standard Packaging:</strong> {item.packaging}</span>
-                      </div>
                     </div>
 
                     {/* Action Buttons */}
