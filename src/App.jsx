@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
-import Imports from './pages/Imports';
 import Contact from './pages/Contact';
 import './App.css';
 
@@ -30,7 +29,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/imports" element={<Imports />} />
+          <Route path="/imports" element={<Navigate to="/products" replace />} />
           <Route path="/contact" element={<Contact />} />
           {/* Catch-all redirect to Home */}
           <Route path="*" element={<Home />} />

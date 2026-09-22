@@ -154,16 +154,6 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  to="/imports"
-                  style={{ color: '#94a3b8', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = '#f59e0b')}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = '#94a3b8')}
-                >
-                  <ArrowRight size={14} /> Import Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/contact"
                   style={{ color: '#94a3b8', fontSize: '0.9rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = '#f59e0b')}
@@ -189,12 +179,11 @@ export default function Footer() {
               Export Commodities
             </h4>
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', color: '#94a3b8', fontSize: '0.9rem' }}>
-              <li>🌱 Premium Washed & Natural Coffee (G1-G4)</li>
-              <li>🌱 Humera & Wollega White Sesame</li>
-              <li>🌱 Ethiopian Niger Seeds & Sunflowers</li>
-              <li>🌱 Desi & Kabuli Chickpeas</li>
-              <li>🌱 Red Speckled & White Kidney Beans</li>
-              <li>🌱 Natural Ginger, Turmeric & Cardamom</li>
+              <li>🌱 Nihug (Ethiopian Niger Seed)</li>
+              <li>🌱 Golden Corn (Ethiopian Maize)</li>
+              <li>🌱 Raw Ginned Lint Cotton</li>
+              <li>🌱 Green Gram (Mung Bean / Masho)</li>
+              <li>🌱 Highland Sorghum (Mashilla)</li>
             </ul>
           </div>
 
@@ -214,15 +203,18 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', color: '#94a3b8', fontSize: '0.9rem' }}>
               <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                 <MapPin size={18} color="#f59e0b" style={{ flexShrink: 0, marginTop: '2px' }} />
-                <span>Bole Sub-city, Near International Airport, Addis Ababa, Ethiopia</span>
+                <span>Bole Airport Road, Around Skylight Hotel Area, Addis Ababa, Ethiopia</span>
               </div>
               <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                 <Phone size={18} color="#22c55e" style={{ flexShrink: 0 }} />
-                <span>+251-11-667-3388 / +251-911-234567</span>
+                <span>+251 911 420 000 / +251 116 183 163</span>
               </div>
               <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                 <Mail size={18} color="#38bdf8" style={{ flexShrink: 0 }} />
-                <span>info@accessethiopia.com</span>
+                <span>info@mychoiceethiopia.com</span>
+              </div>
+              <div style={{ fontSize: '0.78rem', color: '#64748b', marginTop: '0.25rem' }}>
+                License No: 14/666/128419/2005 | VAT: 80692
               </div>
             </div>
           </div>

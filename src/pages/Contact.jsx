@@ -128,17 +128,17 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.35rem' }}>
-                      Physical Address
+                      Addis Ababa Headquarters
                     </h3>
                     <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6' }}>
-                      Access Ethiopia Import Export Trading PLC<br />
-                      Bole Sub-city, Near Bole International Airport<br />
-                      Addis Ababa, Ethiopia
+                      Bole Airport Road, Around Skylight Hotel Area<br />
+                      Addis Ababa, Ethiopia<br />
+                      <span style={{ fontSize: '0.8rem', color: '#64748b' }}>License: 14/666/128419/2005 | VAT: 80692</span>
                     </p>
                   </div>
                 </div>
 
-                {/* Card 2: Phone & WhatsApp */}
+                {/* Card 2: Phone & Hotlines */}
                 <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
                   <div
                     style={{
@@ -157,17 +157,17 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.35rem' }}>
-                      Telephone & WhatsApp
+                      Hotlines & WhatsApp
                     </h3>
                     <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6' }}>
-                      Direct Line: <strong style={{ color: '#e2e8f0' }}>+251-11-667-3388</strong><br />
-                      Mobile / WhatsApp: <strong style={{ color: '#e2e8f0' }}>+251-911-234567</strong><br />
-                      Trade Desk: <strong style={{ color: '#e2e8f0' }}>+251-911-789012</strong>
+                      Addis HQ: <strong style={{ color: '#e2e8f0' }}>+251 911 420 000</strong><br />
+                      Operations Direct: <strong style={{ color: '#e2e8f0' }}>+251 116 183 163</strong><br />
+                      Field Dispatch (24/7): <strong style={{ color: '#e2e8f0' }}>+251 911 234 567</strong>
                     </p>
                   </div>
                 </div>
 
-                {/* Card 3: Email */}
+                {/* Card 3: Email Channels */}
                 <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
                   <div
                     style={{
@@ -186,17 +186,17 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.35rem' }}>
-                      Email Inquiries
+                      Official Email Desks
                     </h3>
                     <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6' }}>
-                      General: <strong style={{ color: '#e2e8f0' }}>info@accessethiopia.com</strong><br />
-                      Commodity Export: <strong style={{ color: '#e2e8f0' }}>export@accessethiopia.com</strong><br />
-                      Import Services: <strong style={{ color: '#e2e8f0' }}>import@accessethiopia.com</strong>
+                      General: <strong style={{ color: '#e2e8f0' }}>info@mychoiceethiopia.com</strong><br />
+                      Logistics & Trade: <strong style={{ color: '#e2e8f0' }}>logistics@mychoiceethiopia.com</strong><br />
+                      Expeditions: <strong style={{ color: '#e2e8f0' }}>travel@mychoiceethiopia.com</strong>
                     </p>
                   </div>
                 </div>
 
-                {/* Card 4: Operating Hours */}
+                {/* Card 4: Operating Hours & Regional Hubs */}
                 <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
                   <div
                     style={{
@@ -215,12 +215,12 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.35rem' }}>
-                      Business Hours (East Africa Time - UTC+3)
+                      Operating Hours & Regional Hubs
                     </h3>
                     <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6' }}>
-                      Monday - Friday: 8:30 AM – 5:30 PM<br />
-                      Saturday: 8:30 AM – 1:00 PM<br />
-                      Sunday: Closed (Emergency export desk on standby)
+                      Addis HQ: <strong style={{ color: '#e2e8f0' }}>Mon – Sat: 08:00 – 18:30 EAT</strong><br />
+                      Semera Hub (Afar): <strong style={{ color: '#e2e8f0' }}>semera@mychoiceethiopia.com (24/7)</strong><br />
+                      Mekelle Hub (Tigray): <strong style={{ color: '#e2e8f0' }}>mekelle@mychoiceethiopia.com</strong>
                     </p>
                   </div>
                 </div>
@@ -385,9 +385,6 @@ export default function Contact() {
                         </option>
                         <option value="Sorghum (Highland Sorghum)" style={{ background: '#0f172a', color: '#ffffff' }}>
                           Sorghum (Highland Sorghum / ማሽላ)
-                        </option>
-                        <option value="Import Division Partnership" style={{ background: '#0f172a', color: '#ffffff' }}>
-                          Import Division Partnership
                         </option>
                         <option value="General Trade Consultation" style={{ background: '#0f172a', color: '#ffffff' }}>
                           General Trade Consultation

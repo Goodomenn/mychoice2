@@ -9,7 +9,6 @@ export default function Navbar() {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Products', path: '/products' },
-    { name: 'Imports', path: '/imports' },
     { name: 'Contact Us', path: '/contact' },
   ];
 
@@ -37,13 +36,13 @@ export default function Navbar() {
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', flexWrap: 'wrap' }}>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
-              <MapPin size={13} color="#f59e0b" /> Addis Ababa, Ethiopia
+              <MapPin size={13} color="#f59e0b" /> Bole Airport Road, Around Skylight Hotel, Addis Ababa
             </span>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
-              <Phone size={13} color="#22c55e" /> +251-11-667-3388
+              <Phone size={13} color="#22c55e" /> +251 911 420 000
             </span>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem' }}>
-              <Mail size={13} color="#38bdf8" /> info@accessethiopia.com
+              <Mail size={13} color="#38bdf8" /> info@mychoiceethiopia.com
             </span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>

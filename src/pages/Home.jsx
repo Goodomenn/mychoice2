@@ -53,25 +53,6 @@ export default function Home() {
     },
   ];
 
-  const importDivisions = [
-    {
-      title: 'Ceramics & Building Materials',
-      desc: 'Importing high-specification tiles, sanitary ware, and architectural finishes from top global manufacturers for major Ethiopian development projects.',
-    },
-    {
-      title: 'Industrial & Agro Chemicals',
-      desc: 'Supplying certified fertilizers, protective compounds, and industrial raw ingredients directly to Ethiopian manufacturers and agricultural producers.',
-    },
-    {
-      title: 'Medical Devices & Equipment',
-      desc: 'Sourcing essential clinical diagnostic tools, hospital equipment, and medical consumables adhering to international healthcare certifications.',
-    },
-    {
-      title: 'Consumer & Food Products',
-      desc: 'Reliable distribution of premium edible oils, canned food products, and essential consumer staples across East African markets.',
-    },
-  ];
-
   const valueProps = [
     {
       title: 'Direct Highland Sourcing',
@@ -341,73 +322,6 @@ export default function Home() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* ================= IMPORT CAPABILITIES ================= */}
-      <section
-        className="section"
-        style={{
-          background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(9, 13, 22, 0.7) 100%)',
-          borderTop: '1px solid rgba(255, 255, 255, 0.06)',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.06)',
-        }}
-      >
-        <div className="container">
-          <div className="section-header">
-            <span className="section-tag">Two-Way International Trade</span>
-            <h2 className="section-title">Import & Supply Chain Services</h2>
-            <p className="section-subtitle">
-              Alongside commodity exports, Access Ethiopia operates a robust import division supplying Ethiopian industries
-              with critical machinery, raw chemicals, pharmaceuticals, and construction ceramics.
-            </p>
-          </div>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-              gap: '1.75rem',
-            }}
-          >
-            {importDivisions.map((item, idx) => (
-              <div key={idx} className="glass-card" style={{ padding: '2rem 1.5rem' }}>
-                <div
-                  style={{
-                    width: '40px',
-                    height: '40px',
-                    borderRadius: '10px',
-                    background: 'rgba(245, 158, 11, 0.15)',
-                    border: '1px solid rgba(245, 158, 11, 0.3)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: '1.25rem',
-                  }}
-                >
-                  <Package size={20} color="#f59e0b" />
-                </div>
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-heading)',
-                    fontSize: '1.2rem',
-                    fontWeight: '700',
-                    color: '#ffffff',
-                    marginBottom: '0.65rem',
-                  }}
-                >
-                  {item.title}
-                </h3>
-                <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.65' }}>{item.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-            <Link to="/imports" className="glass-button glass-button-secondary">
-              Learn More About Import Division <ArrowRight size={16} />
-            </Link>
           </div>
         </div>
       </section>
