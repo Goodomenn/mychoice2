@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Package, ShieldCheck, Truck, Building2, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Package, Building2, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function Imports() {
   const divisions = [

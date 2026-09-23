@@ -8,7 +8,6 @@ import {
   CheckCircle2, 
   Layers, 
   Users, 
-  Wheat, 
   Phone, 
   Mail,
   MapPin

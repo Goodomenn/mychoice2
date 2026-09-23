@@ -6,7 +6,6 @@ import {
   Eye, 
   Award, 
   Globe, 
-  CheckCircle, 
   ArrowRight, 
   Users, 
   Building2, 
@@ -42,12 +41,6 @@ export default function About() {
     },
   ];
 
-  const milestones = [
-    { year: '2010', title: 'Founding in Addis Ababa', desc: 'Established as a specialized agricultural trading house focusing on specialty green coffee.' },
-    { year: '2015', title: 'Oilseeds & Pulses Expansion', desc: 'Expanded export operations to include Humera sesame, niger seed, and high-protein pulses.' },
-    { year: '2019', title: 'Import Division Launch', desc: 'Inaugurated dedicated import channels for industrial chemicals, construction ceramics, and medical supplies.' },
-    { year: '2024', title: 'Global Network Growth', desc: 'Serving over 35 countries across North America, Europe, the Middle East, and Asia.' },
-  ];
 
   const associations = [
     { name: 'ECTA', desc: 'Ethiopia Coffee and Tea Authority', badge: 'Certified Exporter' },

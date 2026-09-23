@@ -7,12 +7,7 @@ import {
   Clock, 
   Send, 
   CheckCircle2, 
-  MessageSquare, 
-  Building, 
-  Sparkles, 
-  Globe2,
   Users,
-  ShieldCheck,
   Lock
 } from 'lucide-react';
 
