@@ -121,22 +121,6 @@ export default function Contact() {
 
               {/* Head Office Addis Ababa */}
               <div className="glass-card" style={{ padding: '1.75rem' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-                  <span
-                    style={{
-                      background: 'rgba(245, 158, 11, 0.15)',
-                      color: '#f59e0b',
-                      fontSize: '0.75rem',
-                      fontWeight: '700',
-                      letterSpacing: '0.06em',
-                      padding: '0.25rem 0.65rem',
-                      borderRadius: '9999px',
-                      border: '1px solid rgba(245, 158, 11, 0.3)',
-                    }}
-                  >
-                    HEAD OFFICE • ADDIS ABABA
-                  </span>
-                </div>
                 <h3 style={{ color: '#ffffff', fontSize: '1.25rem', fontWeight: '700', marginBottom: '0.75rem' }}>
                   Head Office – Yeka Sub City
                 </h3>

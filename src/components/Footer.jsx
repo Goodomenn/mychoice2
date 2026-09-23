@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Award, Globe, ShieldCheck, ArrowRight } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -12,48 +12,8 @@ export default function Footer() {
         marginTop: 'auto',
       }}
     >
-      {/* Top Certifications Strip */}
-      <div
-        style={{
-          borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-          padding: '1.5rem 0',
-          background: 'rgba(255, 255, 255, 0.02)',
-        }}
-      >
-        <div
-          className="container"
-          style={{
-            display: 'flex',
-            justifyContent: 'space-around',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-            gap: '1.5rem',
-            textAlign: 'center',
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <Award size={20} color="#f59e0b" />
-            <span style={{ fontSize: '0.9rem', fontWeight: '600', color: '#e2e8f0' }}>
-              ECTA Certified Coffee Exporter
-            </span>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <ShieldCheck size={20} color="#22c55e" />
-            <span style={{ fontSize: '0.9rem', fontWeight: '600', color: '#e2e8f0' }}>
-              EPOSPEA Registered Member
-            </span>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <Globe size={20} color="#38bdf8" />
-            <span style={{ fontSize: '0.9rem', fontWeight: '600', color: '#e2e8f0' }}>
-              ECX Verified Quality Assurance
-            </span>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer Content */}
-      <div className="container" style={{ padding: '4rem 1.5rem 2.5rem' }}>
+      <div className="container" style={{ padding: '3.5rem 1.5rem 2.5rem' }}>
         <div
           style={{
             display: 'grid',
@@ -61,49 +21,61 @@ export default function Footer() {
             gap: '3rem',
           }}
         >
-          {/* Col 1: About */}
+          {/* Col 1: Brand Logo */}
           <div>
             <div
               style={{
                 display: 'flex',
                 alignItems: 'center',
                 gap: '0.75rem',
-                marginBottom: '1.25rem',
               }}
             >
               <div
                 style={{
-                  width: '38px',
-                  height: '38px',
-                  borderRadius: '10px',
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '12px',
                   background: 'linear-gradient(135deg, #15803d 0%, #d97706 100%)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: '#ffffff',
                   fontWeight: '800',
-                  fontSize: '1.1rem',
+                  fontSize: '1.25rem',
+                  boxShadow: '0 4px 12px rgba(21, 128, 61, 0.4)',
+                  border: '1px solid rgba(255, 255, 255, 0.3)',
+                  flexShrink: 0,
                 }}
               >
                 M
               </div>
-              <div
-                style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '1.15rem',
-                  fontWeight: '800',
-                  color: '#ffffff',
-                }}
-              >
-                MY CHOICE <span style={{ color: '#f59e0b' }}>ETHIOPIA AGRO</span>
+              <div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.15rem',
+                    fontWeight: '800',
+                    letterSpacing: '0.04em',
+                    color: '#ffffff',
+                    lineHeight: '1.2',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  MY CHOICE <span style={{ color: '#f59e0b' }}>ETHIOPIA AGRO</span>
+                </div>
+                <div
+                  style={{
+                    fontSize: '0.65rem',
+                    color: '#94a3b8',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.12em',
+                    fontWeight: '600',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  Import & Export Trading PLC
+                </div>
               </div>
-            </div>
-            <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '1.5rem' }}>
-              My Choice Ethiopia Agro Import Export Trading PLC is a premier Ethiopian trading house connecting global markets
-              with authentic, certified organic Arabica coffee, premium oilseeds, nutritious pulses, and spices.
-            </p>
-            <div className="glass-badge" style={{ fontSize: '0.78rem' }}>
-              Licensed Import & Export Enterprise
             </div>
           </div>
 
