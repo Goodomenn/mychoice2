@@ -85,7 +85,7 @@ export default function Footer() {
                   fontSize: '1.1rem',
                 }}
               >
-                A
+                M
               </div>
               <div
                 style={{
@@ -95,11 +95,11 @@ export default function Footer() {
                   color: '#ffffff',
                 }}
               >
-                ACCESS <span style={{ color: '#f59e0b' }}>ETHIOPIA</span>
+                MY CHOICE <span style={{ color: '#f59e0b' }}>ETHIOPIA AGRO</span>
               </div>
             </div>
             <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.7', marginBottom: '1.5rem' }}>
-              Access Ethiopia Import Export Trading PLC is a premier Ethiopian trading house connecting global markets
+              My Choice Ethiopia Agro Import Export Trading PLC is a premier Ethiopian trading house connecting global markets
               with authentic, certified organic Arabica coffee, premium oilseeds, nutritious pulses, and spices.
             </p>
             <div className="glass-badge" style={{ fontSize: '0.78rem' }}>
@@ -236,7 +236,7 @@ export default function Footer() {
           }}
         >
           <div>
-            © {new Date().getFullYear()} Access Ethiopia Import Export Trading PLC. All rights reserved.
+            © {new Date().getFullYear()} My Choice Ethiopia Agro Import Export Trading PLC. All rights reserved.
           </div>
           <div style={{ display: 'flex', gap: '1.5rem' }}>
             <Link to="/about" style={{ color: '#94a3b8' }}>Privacy Policy</Link>

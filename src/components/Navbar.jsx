@@ -79,72 +79,79 @@ export default function Navbar() {
         <div
           className="container"
           style={{
-            display: 'flex',
-            justifyContent: 'space-between',
+            display: 'grid',
+            gridTemplateColumns: '1fr auto 1fr',
             alignItems: 'center',
+            width: '100%',
           }}
         >
-          {/* Brand Logo */}
-          <Link
-            to="/"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.75rem',
-              textDecoration: 'none',
-            }}
-          >
-            <div
+          {/* Brand Logo (Left) */}
+          <div style={{ justifySelf: 'start' }}>
+            <Link
+              to="/"
               style={{
-                width: '42px',
-                height: '42px',
-                borderRadius: '12px',
-                background: 'linear-gradient(135deg, #15803d 0%, #d97706 100%)',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center',
-                color: '#ffffff',
-                fontWeight: '800',
-                fontSize: '1.25rem',
-                boxShadow: '0 4px 12px rgba(21, 128, 61, 0.4)',
-                border: '1px solid rgba(255, 255, 255, 0.3)',
+                gap: '0.75rem',
+                textDecoration: 'none',
               }}
             >
-              A
-            </div>
-            <div>
               <div
                 style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '1.2rem',
-                  fontWeight: '800',
-                  letterSpacing: '0.04em',
+                  width: '42px',
+                  height: '42px',
+                  borderRadius: '12px',
+                  background: 'linear-gradient(135deg, #15803d 0%, #d97706 100%)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
                   color: '#ffffff',
-                  lineHeight: '1.2',
+                  fontWeight: '800',
+                  fontSize: '1.25rem',
+                  boxShadow: '0 4px 12px rgba(21, 128, 61, 0.4)',
+                  border: '1px solid rgba(255, 255, 255, 0.3)',
+                  flexShrink: 0,
                 }}
               >
-                ACCESS <span style={{ color: '#f59e0b' }}>ETHIOPIA</span>
+                M
               </div>
-              <div
-                style={{
-                  fontSize: '0.65rem',
-                  color: '#94a3b8',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.12em',
-                  fontWeight: '600',
-                }}
-              >
-                Import & Export Trading PLC
+              <div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.15rem',
+                    fontWeight: '800',
+                    letterSpacing: '0.04em',
+                    color: '#ffffff',
+                    lineHeight: '1.2',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  MY CHOICE <span style={{ color: '#f59e0b' }}>ETHIOPIA AGRO</span>
+                </div>
+                <div
+                  style={{
+                    fontSize: '0.65rem',
+                    color: '#94a3b8',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.12em',
+                    fontWeight: '600',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  Import & Export Trading PLC
+                </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
 
-          {/* Desktop Nav Links */}
+          {/* Desktop Nav Links (Center) */}
           <div
             style={{
+              justifySelf: 'center',
               display: 'flex',
               alignItems: 'center',
-              gap: '2rem',
+              gap: '2.5rem',
             }}
             className="desktop-nav"
           >
@@ -160,36 +167,32 @@ export default function Navbar() {
                   padding: '0.4rem 0',
                   transition: 'all 0.2s ease',
                   borderBottom: isActive ? '2px solid #f59e0b' : '2px solid transparent',
+                  whiteSpace: 'nowrap',
                 })}
               >
                 {link.name}
               </NavLink>
             ))}
-
-            <Link
-              to="/contact"
-              className="glass-button glass-button-primary"
-              style={{ padding: '0.55rem 1.25rem', fontSize: '0.875rem' }}
-            >
-              <Sparkles size={14} /> Get a Quote
-            </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="mobile-toggle"
-            style={{
-              color: '#ffffff',
-              padding: '0.5rem',
-              borderRadius: '0.5rem',
-              background: 'rgba(255, 255, 255, 0.08)',
-              border: '1px solid rgba(255, 255, 255, 0.15)',
-            }}
-            aria-label="Toggle navigation menu"
-          >
-            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Right Spacer & Mobile Toggle (Right) */}
+          <div style={{ justifySelf: 'end', display: 'flex', alignItems: 'center' }}>
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="mobile-toggle"
+              style={{
+                color: '#ffffff',
+                padding: '0.5rem',
+                borderRadius: '0.5rem',
+                background: 'rgba(255, 255, 255, 0.08)',
+                border: '1px solid rgba(255, 255, 255, 0.15)',
+                cursor: 'pointer',
+              }}
+              aria-label="Toggle navigation menu"
+            >
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Dropdown Menu */}
@@ -227,20 +230,17 @@ export default function Navbar() {
                 <ChevronRight size={16} color="#94a3b8" />
               </NavLink>
             ))}
-            <Link
-              to="/contact"
-              onClick={() => setMobileMenuOpen(false)}
-              className="glass-button glass-button-primary"
-              style={{ marginTop: '0.5rem', width: '100%', justifyContent: 'center' }}
-            >
-              Get a Quote
-            </Link>
           </div>
         )}
       </nav>
 
       {/* Style for responsive toggle */}
       <style>{`
+        @media (max-width: 1024px) {
+          .desktop-nav {
+            gap: 1.5rem !important;
+          }
+        }
         @media (max-width: 900px) {
           .desktop-nav {
             display: none !important;

@@ -81,7 +81,7 @@ export default function About() {
               marginBottom: '1rem',
             }}
           >
-            About <span style={{ color: '#22c55e' }}>Access Ethiopia</span> Trading PLC
+            About <span style={{ color: '#22c55e' }}>My Choice Ethiopia Agro</span> Trading PLC
           </h1>
           <p
             style={{
@@ -115,7 +115,7 @@ export default function About() {
                 A Trusted Partner in International Commerce
               </h2>
               <p style={{ color: '#cbd5e1', fontSize: '1.05rem', lineHeight: '1.75', marginBottom: '1.25rem' }}>
-                Access Ethiopia Import Export Trading PLC is a premier trading house headquartered in Addis Ababa,
+                My Choice Ethiopia Agro Import Export Trading PLC is a premier trading house headquartered in Addis Ababa,
                 Ethiopia. Guided by deep industry expertise and an extensive network of cooperative unions, we export the
                 finest agricultural commodities produced in the fertile highlands of Ethiopia.
               </p>

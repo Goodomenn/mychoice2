@@ -72,19 +72,16 @@ export default function Contact() {
         }}
       >
         <div className="container">
-          <span className="glass-badge" style={{ color: '#fbbf24', borderColor: 'rgba(251, 191, 36, 0.3)' }}>
-            <MessageSquare size={14} /> Direct Trade Communications & Officers
-          </span>
           <h1
             style={{
               fontFamily: 'var(--font-heading)',
               fontSize: 'clamp(2.2rem, 4vw, 3.5rem)',
               fontWeight: 800,
               color: '#ffffff',
-              margin: '1rem 0',
+              margin: '0 0 1rem 0',
             }}
           >
-            Contact <span style={{ color: '#f59e0b' }}>MyChoice Ethiopia</span>
+            Contact <span style={{ color: '#f59e0b' }}>My Choice Ethiopia Agro</span>
           </h1>
           <p
             style={{
@@ -251,9 +248,6 @@ export default function Contact() {
                 }}
               >
                 <div style={{ marginBottom: '2rem' }}>
-                  <span className="glass-badge" style={{ marginBottom: '0.75rem' }}>
-                    <Sparkles size={14} /> Direct Operational Desk
-                  </span>
                   <h3
                     style={{
                       fontFamily: 'var(--font-heading)',
