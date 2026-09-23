@@ -203,18 +203,18 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', color: '#94a3b8', fontSize: '0.9rem' }}>
               <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                 <MapPin size={18} color="#f59e0b" style={{ flexShrink: 0, marginTop: '2px' }} />
-                <span>Bole Airport Road, Around Skylight Hotel Area, Addis Ababa, Ethiopia</span>
+                <span>Woreda 09, Gurdsholla, Dawit Building, 3rd Floor, Room 303/304, Addis Ababa, Ethiopia</span>
               </div>
               <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                 <Phone size={18} color="#22c55e" style={{ flexShrink: 0 }} />
-                <span>+251 911 420 000 / +251 116 183 163</span>
+                <span>+251-116-67-57-76 / +251-929-92-31-31</span>
               </div>
               <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
                 <Mail size={18} color="#38bdf8" style={{ flexShrink: 0 }} />
-                <span>info@mychoiceethiopia.com</span>
+                <span>mychoiceethiopia@gmail.com</span>
               </div>
               <div style={{ fontSize: '0.78rem', color: '#64748b', marginTop: '0.25rem' }}>
-                License No: 14/666/128419/2005 | VAT: 80692
+                License No: 14/666/128419/2005 | VAT: 80692 | SIGTAS Active
               </div>
             </div>
           </div>

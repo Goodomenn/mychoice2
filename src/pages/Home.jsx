@@ -506,13 +506,13 @@ export default function Home() {
                 }}
               >
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
-                  <Phone size={15} color="#22c55e" /> +251 911 420 000
+                  <Phone size={15} color="#22c55e" /> +251-116-67-57-76
                 </span>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
-                  <Mail size={15} color="#38bdf8" /> info@mychoiceethiopia.com
+                  <Mail size={15} color="#38bdf8" /> mychoiceethiopia@gmail.com
                 </span>
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
-                  <MapPin size={15} color="#f59e0b" /> Bole Airport Road, Skylight Area, Addis Ababa
+                  <MapPin size={15} color="#f59e0b" /> Gurdsholla, Dawit Building, Addis Ababa
                 </span>
               </div>
 

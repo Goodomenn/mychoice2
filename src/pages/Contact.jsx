@@ -10,8 +10,41 @@ import {
   MessageSquare, 
   Building, 
   Sparkles, 
-  Globe2 
+  Globe2,
+  Users,
+  ShieldCheck,
+  Lock
 } from 'lucide-react';
+
+const personnelList = [
+  {
+    roleNum: '01',
+    category: 'Principal Contact Person',
+    name: 'Teklay Mengesha',
+    title: 'Vice Manager',
+    office: '+251-116-67-57-76',
+    mobile: '+251-929-92-31-31 / +251-941-61-65-61/62',
+    email: 'mychoiceethiopia@gmail.com',
+  },
+  {
+    roleNum: '02',
+    category: 'Contact Person',
+    name: 'Pukiler Birhanu',
+    title: 'Logistics Officer',
+    office: '+251-116-67-57-76',
+    mobile: '+251-941-61-65-61/62',
+    email: 'mychoiceethiopia@gmail.com',
+  },
+  {
+    roleNum: '03',
+    category: 'Contact for Mekelle & Afar Office',
+    name: 'Samsom Halefom',
+    title: 'Logistics Officer',
+    office: 'Regional Branch Direct',
+    mobile: '+251-902-41-11-41',
+    email: 'mychoiceethiopia@gmail.com',
+  },
+];
 
 export default function Contact() {
   const [searchParams] = useSearchParams();
@@ -22,6 +55,7 @@ export default function Contact() {
     email: '',
     phone: '',
     country: '',
+    branch: 'Head Office – Yeka Sub City (Addis Ababa)',
     inquiryType: initialProduct,
     volume: '',
     message: '',
@@ -38,7 +72,6 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulate submission
     setSubmitted(true);
   };
 
@@ -59,7 +92,7 @@ export default function Contact() {
       >
         <div className="container">
           <span className="glass-badge" style={{ color: '#fbbf24', borderColor: 'rgba(251, 191, 36, 0.3)' }}>
-            <MessageSquare size={14} /> Direct Trade Communications
+            <MessageSquare size={14} /> Direct Regional Dispatch & Officers
           </span>
           <h1
             style={{
@@ -70,19 +103,18 @@ export default function Contact() {
               margin: '1rem 0',
             }}
           >
-            Contact <span style={{ color: '#f59e0b' }}>Our Trade Desk</span>
+            Contact <span style={{ color: '#f59e0b' }}>MyChoice Ethiopia</span>
           </h1>
           <p
             style={{
               color: '#94a3b8',
               fontSize: '1.15rem',
-              maxWidth: '650px',
+              maxWidth: '680px',
               margin: '0 auto',
               lineHeight: '1.65',
             }}
           >
-            Whether you need green coffee samples, commodity contract quotes (FOB/CIF), or import partnership
-            discussions, our team in Addis Ababa is ready to assist.
+            Reach our Head Office in Addis Ababa or our regional branch offices in Semera (Afar) and Kedamay Woyane (Mekelle) for agricultural commodity contracts, trade partnerships, and sample orders.
           </p>
         </div>
       </section>
@@ -97,132 +129,238 @@ export default function Contact() {
               gap: '3rem',
             }}
           >
-            {/* Left Column: Contact Cards & Location */}
-            <div>
-              <span className="section-tag">Direct Information</span>
-              <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1.5rem' }}>
-                Headquarters in Addis Ababa
-              </h2>
-              <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.7', marginBottom: '2.5rem' }}>
-                Visit our corporate office or contact our commodities department. We facilitate sample dispatches via DHL /
-                FedEx to verified buyers worldwide.
-              </p>
+            {/* Left Column: Regional Branch Cards & Key Personnel */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <div>
+                <span className="section-tag">Direct Presence</span>
+                <h2 className="section-title" style={{ textAlign: 'left', marginBottom: '1.25rem' }}>
+                  Three Regional Operational Branches
+                </h2>
+                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.7', marginBottom: '1.75rem' }}>
+                  On-the-ground physical offices guaranteeing localized management, verified crop aggregation, and immediate response.
+                </p>
+              </div>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                {/* Card 1: Address */}
-                <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
-                  <div
+              {/* Branch 1: Head Office Addis Ababa */}
+              <div className="glass-card" style={{ padding: '1.75rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                  <span
                     style={{
-                      width: '46px',
-                      height: '46px',
-                      borderRadius: '12px',
                       background: 'rgba(245, 158, 11, 0.15)',
+                      color: '#f59e0b',
+                      fontSize: '0.75rem',
+                      fontWeight: '700',
+                      letterSpacing: '0.06em',
+                      padding: '0.25rem 0.65rem',
+                      borderRadius: '9999px',
                       border: '1px solid rgba(245, 158, 11, 0.3)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexShrink: 0,
                     }}
                   >
-                    <MapPin size={22} color="#f59e0b" />
+                    HEAD OFFICE • ADDIS ABABA
+                  </span>
+                </div>
+                <h3 style={{ color: '#ffffff', fontSize: '1.2rem', fontWeight: '700', marginBottom: '0.75rem' }}>
+                  1. Head Office – Yeka Sub City
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.9rem', color: '#cbd5e1' }}>
+                  <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
+                    <MapPin size={17} color="#f59e0b" style={{ flexShrink: 0, marginTop: '2px' }} />
+                    <span>Woreda 09, Gurdsholla, Dawit Building, 3rd Floor, Room 303/304, Addis Ababa, Ethiopia</span>
                   </div>
-                  <div>
-                    <h3 style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.35rem' }}>
-                      Addis Ababa Headquarters
-                    </h3>
-                    <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6' }}>
-                      Bole Airport Road, Around Skylight Hotel Area<br />
-                      Addis Ababa, Ethiopia<br />
-                      <span style={{ fontSize: '0.8rem', color: '#64748b' }}>License: 14/666/128419/2005 | VAT: 80692</span>
-                    </p>
+                  <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
+                    <Phone size={17} color="#22c55e" style={{ flexShrink: 0, marginTop: '2px' }} />
+                    <span>
+                      Office: <strong>+251-116-67-57-76</strong><br />
+                      Mobile: <strong>+251-929-92-31-31 / +251-941-61-65-61/62</strong>
+                    </span>
+                  </div>
+                  <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'center' }}>
+                    <Mail size={17} color="#38bdf8" style={{ flexShrink: 0 }} />
+                    <span style={{ color: '#38bdf8' }}>mychoiceethiopia@gmail.com</span>
+                  </div>
+                  <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'center' }}>
+                    <Clock size={17} color="#eab308" style={{ flexShrink: 0 }} />
+                    <span>Monday – Saturday: 8:00 AM – 6:00 PM (EAT)</span>
                   </div>
                 </div>
+                <div
+                  style={{
+                    marginTop: '1rem',
+                    paddingTop: '0.75rem',
+                    borderTop: '1px dashed rgba(255, 255, 255, 0.12)',
+                    fontSize: '0.85rem',
+                    color: '#94a3b8',
+                  }}
+                >
+                  <strong style={{ color: '#f59e0b' }}>Principal Contact:</strong> Teklay Mengesha, Vice Manager
+                </div>
+              </div>
 
-                {/* Card 2: Phone & Hotlines */}
-                <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
-                  <div
+              {/* Branch 2: Semera Afar */}
+              <div className="glass-card" style={{ padding: '1.75rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                  <span
                     style={{
-                      width: '46px',
-                      height: '46px',
-                      borderRadius: '12px',
-                      background: 'rgba(34, 197, 94, 0.15)',
-                      border: '1px solid rgba(34, 197, 94, 0.3)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexShrink: 0,
+                      background: 'rgba(239, 68, 68, 0.15)',
+                      color: '#f87171',
+                      fontSize: '0.75rem',
+                      fontWeight: '700',
+                      letterSpacing: '0.06em',
+                      padding: '0.25rem 0.65rem',
+                      borderRadius: '9999px',
+                      border: '1px solid rgba(239, 68, 68, 0.3)',
                     }}
                   >
-                    <Phone size={22} color="#22c55e" />
+                    AFAR REGIONAL BRANCH
+                  </span>
+                </div>
+                <h3 style={{ color: '#ffffff', fontSize: '1.2rem', fontWeight: '700', marginBottom: '0.75rem' }}>
+                  2. Branch Office – Semera
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.9rem', color: '#cbd5e1' }}>
+                  <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
+                    <MapPin size={17} color="#f87171" style={{ flexShrink: 0, marginTop: '2px' }} />
+                    <span>Zone 01, Kebele 01, Semera City, Afar Regional State</span>
                   </div>
-                  <div>
-                    <h3 style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.35rem' }}>
-                      Hotlines & WhatsApp
-                    </h3>
-                    <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6' }}>
-                      Addis HQ: <strong style={{ color: '#e2e8f0' }}>+251 911 420 000</strong><br />
-                      Operations Direct: <strong style={{ color: '#e2e8f0' }}>+251 116 183 163</strong><br />
-                      Field Dispatch (24/7): <strong style={{ color: '#e2e8f0' }}>+251 911 234 567</strong>
-                    </p>
+                  <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'center' }}>
+                    <Phone size={17} color="#22c55e" style={{ flexShrink: 0 }} />
+                    <span>Mobile: <strong>+251-902-41-11-41 / +251-941-61-65-61/62</strong></span>
+                  </div>
+                  <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'center' }}>
+                    <Mail size={17} color="#38bdf8" style={{ flexShrink: 0 }} />
+                    <span style={{ color: '#38bdf8' }}>mychoiceethiopia@gmail.com</span>
                   </div>
                 </div>
+                <p style={{ color: '#94a3b8', fontSize: '0.825rem', marginTop: '0.75rem', lineHeight: '1.5' }}>
+                  Regional field operations center, local crop aggregation, liaison with regional agricultural cooperatives, and field coordination.
+                </p>
+                <div
+                  style={{
+                    marginTop: '0.85rem',
+                    paddingTop: '0.75rem',
+                    borderTop: '1px dashed rgba(255, 255, 255, 0.12)',
+                    fontSize: '0.85rem',
+                    color: '#94a3b8',
+                  }}
+                >
+                  <strong style={{ color: '#f87171' }}>Branch Officer:</strong> Samsom Halefom, Logistics Officer
+                </div>
+              </div>
 
-                {/* Card 3: Email Channels */}
-                <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
-                  <div
+              {/* Branch 3: Tigray Mekelle */}
+              <div className="glass-card" style={{ padding: '1.75rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+                  <span
                     style={{
-                      width: '46px',
-                      height: '46px',
-                      borderRadius: '12px',
-                      background: 'rgba(56, 189, 248, 0.15)',
-                      border: '1px solid rgba(56, 189, 248, 0.3)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexShrink: 0,
+                      background: 'rgba(59, 130, 246, 0.15)',
+                      color: '#60a5fa',
+                      fontSize: '0.75rem',
+                      fontWeight: '700',
+                      letterSpacing: '0.06em',
+                      padding: '0.25rem 0.65rem',
+                      borderRadius: '9999px',
+                      border: '1px solid rgba(59, 130, 246, 0.3)',
                     }}
                   >
-                    <Mail size={22} color="#38bdf8" />
+                    TIGRAY REGIONAL BRANCH
+                  </span>
+                </div>
+                <h3 style={{ color: '#ffffff', fontSize: '1.2rem', fontWeight: '700', marginBottom: '0.75rem' }}>
+                  3. Branch Office – Kedamay Woyane Sub City
+                </h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.9rem', color: '#cbd5e1' }}>
+                  <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
+                    <MapPin size={17} color="#60a5fa" style={{ flexShrink: 0, marginTop: '2px' }} />
+                    <span>BMR Building, 5th Floor, Room Number 509, Mekelle City, Tigray, Ethiopia</span>
                   </div>
-                  <div>
-                    <h3 style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.35rem' }}>
-                      Official Email Desks
-                    </h3>
-                    <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6' }}>
-                      General: <strong style={{ color: '#e2e8f0' }}>info@mychoiceethiopia.com</strong><br />
-                      Logistics & Trade: <strong style={{ color: '#e2e8f0' }}>logistics@mychoiceethiopia.com</strong><br />
-                      Expeditions: <strong style={{ color: '#e2e8f0' }}>travel@mychoiceethiopia.com</strong>
-                    </p>
+                  <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'center' }}>
+                    <Phone size={17} color="#22c55e" style={{ flexShrink: 0 }} />
+                    <span>Mobile: <strong>+251-902-41-11-41</strong></span>
+                  </div>
+                  <div style={{ display: 'flex', gap: '0.65rem', alignItems: 'center' }}>
+                    <Mail size={17} color="#38bdf8" style={{ flexShrink: 0 }} />
+                    <span style={{ color: '#38bdf8' }}>mychoiceethiopia@gmail.com</span>
                   </div>
                 </div>
+                <p style={{ color: '#94a3b8', fontSize: '0.825rem', marginTop: '0.75rem', lineHeight: '1.5' }}>
+                  Regional logistics hub, northern agricultural aggregation for sorghum, sunflower, and pulses, and cooperative partnership desk.
+                </p>
+                <div
+                  style={{
+                    marginTop: '0.85rem',
+                    paddingTop: '0.75rem',
+                    borderTop: '1px dashed rgba(255, 255, 255, 0.12)',
+                    fontSize: '0.85rem',
+                    color: '#94a3b8',
+                  }}
+                >
+                  <strong style={{ color: '#60a5fa' }}>Branch Officer:</strong> Samsom Halefom, Logistics Officer
+                </div>
+              </div>
 
-                {/* Card 4: Operating Hours & Regional Hubs */}
-                <div className="glass-card" style={{ padding: '1.5rem', display: 'flex', gap: '1.25rem', alignItems: 'flex-start' }}>
-                  <div
-                    style={{
-                      width: '46px',
-                      height: '46px',
-                      borderRadius: '12px',
-                      background: 'rgba(236, 72, 153, 0.15)',
-                      border: '1px solid rgba(236, 72, 153, 0.3)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      flexShrink: 0,
-                    }}
-                  >
-                    <Clock size={22} color="#ec4899" />
-                  </div>
-                  <div>
-                    <h3 style={{ color: '#ffffff', fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.35rem' }}>
-                      Operating Hours & Regional Hubs
-                    </h3>
-                    <p style={{ color: '#94a3b8', fontSize: '0.9rem', lineHeight: '1.6' }}>
-                      Addis HQ: <strong style={{ color: '#e2e8f0' }}>Mon – Sat: 08:00 – 18:30 EAT</strong><br />
-                      Semera Hub (Afar): <strong style={{ color: '#e2e8f0' }}>semera@mychoiceethiopia.com (24/7)</strong><br />
-                      Mekelle Hub (Tigray): <strong style={{ color: '#e2e8f0' }}>mekelle@mychoiceethiopia.com</strong>
-                    </p>
-                  </div>
+              {/* Personnel Directory Card */}
+              <div
+                className="glass-card"
+                style={{
+                  padding: '1.75rem',
+                  background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(15, 23, 42, 0.7) 100%)',
+                  border: '1px solid rgba(245, 158, 11, 0.25)',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.25rem' }}>
+                  <Users size={20} color="#f59e0b" />
+                  <h3 style={{ color: '#ffffff', fontSize: '1.15rem', fontWeight: '700', margin: 0 }}>
+                    Principal Personnel & Roles
+                  </h3>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.15rem' }}>
+                  {personnelList.map((p, idx) => (
+                    <div
+                      key={p.name}
+                      style={{
+                        paddingBottom: idx < personnelList.length - 1 ? '1rem' : '0',
+                        borderBottom: idx < personnelList.length - 1 ? '1px dashed rgba(255, 255, 255, 0.1)' : 'none',
+                      }}
+                    >
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', flexWrap: 'wrap', gap: '0.35rem' }}>
+                        <strong style={{ color: '#ffffff', fontSize: '0.95rem' }}>{p.name}</strong>
+                        <span style={{ color: '#f59e0b', fontSize: '0.8rem', fontWeight: '600' }}>{p.title}</span>
+                      </div>
+                      <div style={{ fontSize: '0.78rem', color: '#94a3b8', margin: '0.15rem 0 0.35rem' }}>
+                        {p.category}
+                      </div>
+                      <div style={{ fontSize: '0.85rem', color: '#cbd5e1', lineHeight: '1.5' }}>
+                        {p.office !== 'Regional Branch Direct' && <span>Office: {p.office} • </span>}
+                        <span>Mobile: {p.mobile}</span>
+                      </div>
+                      <div style={{ fontSize: '0.825rem', color: '#38bdf8', marginTop: '0.2rem' }}>
+                        Email: {p.email}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Security & Banking Notice */}
+              <div
+                className="glass-card"
+                style={{
+                  padding: '1.25rem 1.5rem',
+                  display: 'flex',
+                  gap: '1rem',
+                  alignItems: 'flex-start',
+                  background: 'rgba(15, 23, 42, 0.6)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                }}
+              >
+                <Lock size={20} color="#f59e0b" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <div>
+                  <h4 style={{ color: '#ffffff', fontSize: '0.9rem', fontWeight: '700', marginBottom: '0.3rem' }}>
+                    Security Notice: Official Banking Information
+                  </h4>
+                  <p style={{ color: '#94a3b8', fontSize: '0.825rem', lineHeight: '1.5', margin: 0 }}>
+                    In compliance with cybersecurity and anti-fraud regulations, Commercial Bank of Ethiopia (CBE) accounts are not displayed on open digital channels. Complete verified settlement details are provided on official company letterhead upon contract signing.
+                  </p>
                 </div>
               </div>
             </div>
@@ -235,11 +373,13 @@ export default function Contact() {
                   padding: '3rem 2.5rem',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
                   background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(15, 23, 42, 0.9) 100%)',
+                  position: 'sticky',
+                  top: '6rem',
                 }}
               >
                 <div style={{ marginBottom: '2rem' }}>
                   <span className="glass-badge" style={{ marginBottom: '0.75rem' }}>
-                    <Sparkles size={14} /> Trade Inquiry Form
+                    <Sparkles size={14} /> Direct Operational Desk
                   </span>
                   <h3
                     style={{
@@ -253,7 +393,7 @@ export default function Contact() {
                     Send Us an Inquiry
                   </h3>
                   <p style={{ color: '#94a3b8', fontSize: '0.925rem' }}>
-                    Fill in the form below and our international sales representative will respond within 24 hours.
+                    Your message will be automatically routed to Vice Manager Teklay Mengesha or the designated Logistics Officer.
                   </p>
                 </div>
 
@@ -272,9 +412,8 @@ export default function Contact() {
                       Inquiry Received Successfully!
                     </h4>
                     <p style={{ color: '#cbd5e1', fontSize: '0.95rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-                      Thank you, <strong style={{ color: '#ffffff' }}>{formData.name}</strong>. Your inquiry regarding{' '}
-                      <strong style={{ color: '#f59e0b' }}>{formData.inquiryType}</strong> has been routed to our export
-                      team. We will contact you at <strong style={{ color: '#ffffff' }}>{formData.email}</strong>.
+                      Thank you, <strong style={{ color: '#ffffff' }}>{formData.name}</strong>. Vice Manager Teklay Mengesha and our logistics officers have received your inquiry regarding{' '}
+                      <strong style={{ color: '#f59e0b' }}>{formData.inquiryType}</strong> ({formData.branch}). We will contact you at <strong style={{ color: '#ffffff' }}>{formData.email}</strong> promptly.
                     </p>
                     <button
                       onClick={() => setSubmitted(false)}
@@ -296,7 +435,7 @@ export default function Contact() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="e.g. John Doe / Global Coffee Imports LLC"
+                        placeholder="e.g. John Doe / Global Agritrade LLC"
                         className="glass-input"
                       />
                     </div>
@@ -318,17 +457,41 @@ export default function Contact() {
                       </div>
                       <div>
                         <label style={{ display: 'block', fontSize: '0.85rem', color: '#cbd5e1', marginBottom: '0.4rem', fontWeight: '500' }}>
-                          Phone / WhatsApp
+                          Phone / WhatsApp *
                         </label>
                         <input
                           type="tel"
                           name="phone"
+                          required
                           value={formData.phone}
                           onChange={handleChange}
-                          placeholder="+1 234 567 890"
+                          placeholder="+251 ..."
                           className="glass-input"
                         />
                       </div>
+                    </div>
+
+                    <div>
+                      <label style={{ display: 'block', fontSize: '0.85rem', color: '#cbd5e1', marginBottom: '0.4rem', fontWeight: '500' }}>
+                        Preferred Operational Branch
+                      </label>
+                      <select
+                        name="branch"
+                        value={formData.branch}
+                        onChange={handleChange}
+                        className="glass-input"
+                        style={{ cursor: 'pointer' }}
+                      >
+                        <option value="Head Office – Yeka Sub City (Addis Ababa)" style={{ background: '#0f172a', color: '#ffffff' }}>
+                          Head Office – Yeka Sub City (Addis Ababa)
+                        </option>
+                        <option value="Branch Office – Semera (Afar)" style={{ background: '#0f172a', color: '#ffffff' }}>
+                          Branch Office – Semera (Afar)
+                        </option>
+                        <option value="Branch Office – Kedamay Woyane Sub City (Mekelle)" style={{ background: '#0f172a', color: '#ffffff' }}>
+                          Branch Office – Kedamay Woyane Sub City (Mekelle)
+                        </option>
+                      </select>
                     </div>
 
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
@@ -341,7 +504,7 @@ export default function Contact() {
                           name="country"
                           value={formData.country}
                           onChange={handleChange}
-                          placeholder="e.g. Hamburg, Germany"
+                          placeholder="e.g. Djibouti / Hamburg / Dubai"
                           className="glass-input"
                         />
                       </div>
@@ -386,15 +549,15 @@ export default function Contact() {
                         <option value="Sorghum (Highland Sorghum)" style={{ background: '#0f172a', color: '#ffffff' }}>
                           Sorghum (Highland Sorghum / ማሽላ)
                         </option>
-                        <option value="General Trade Consultation" style={{ background: '#0f172a', color: '#ffffff' }}>
-                          General Trade Consultation
+                        <option value="General Agricultural Trade / Investment Consultation" style={{ background: '#0f172a', color: '#ffffff' }}>
+                          General Agricultural Trade / Investment Consultation
                         </option>
                       </select>
                     </div>
 
                     <div>
                       <label style={{ display: 'block', fontSize: '0.85rem', color: '#cbd5e1', marginBottom: '0.4rem', fontWeight: '500' }}>
-                        Message / Specific Requirements *
+                        Message / Order Specifications *
                       </label>
                       <textarea
                         name="message"
@@ -402,7 +565,7 @@ export default function Contact() {
                         rows="4"
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Please include grade specifications, delivery timeline, sample requirements, and target Incoterms (FOB/CIF)."
+                        placeholder="Please include crop specifications, purity/moisture criteria, target delivery schedule, and preferred Incoterms (FOB/CIF)."
                         className="glass-input"
                         style={{ resize: 'vertical' }}
                       />
@@ -413,8 +576,12 @@ export default function Contact() {
                       className="glass-button glass-button-primary"
                       style={{ padding: '0.9rem', width: '100%', marginTop: '0.5rem', justifyContent: 'center' }}
                     >
-                      <Send size={18} /> Submit Trade Inquiry
+                      <Send size={18} /> Transmit Inquiry to Desk
                     </button>
+
+                    <div style={{ textAlign: 'center', fontSize: '0.78rem', color: '#64748b', marginTop: '0.5rem' }}>
+                      Verified Legal Credentials: Business License #14/666/128419/2005 • VAT Registration #80692 • SIGTAS Active
+                    </div>
                   </form>
                 )}
               </div>
