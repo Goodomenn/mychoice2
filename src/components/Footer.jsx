@@ -30,25 +30,11 @@ export default function Footer() {
                 gap: '0.75rem',
               }}
             >
-              <div
-                style={{
-                  width: '42px',
-                  height: '42px',
-                  borderRadius: '12px',
-                  background: 'linear-gradient(135deg, #15803d 0%, #d97706 100%)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#ffffff',
-                  fontWeight: '800',
-                  fontSize: '1.25rem',
-                  boxShadow: '0 4px 12px rgba(21, 128, 61, 0.4)',
-                  border: '1px solid rgba(255, 255, 255, 0.3)',
-                  flexShrink: 0,
-                }}
-              >
-                M
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="MyChoice Ethiopia Agro Logo" 
+                style={{ width: '44px', height: '44px', objectFit: 'contain', flexShrink: 0 }} 
+              />
               <div>
                 <div
                   style={{

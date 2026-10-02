@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { collection, onSnapshot } from 'firebase/firestore';
+import { db } from '../firebase/config';
 import { 
   ArrowRight, 
   Sparkles, 
@@ -7,8 +9,7 @@ import {
   FileText
 } from 'lucide-react';
 
-export default function Products() {
-  const products = [
+const defaultProducts = [
     {
       id: 'nihug',
       number: '01',
@@ -116,6 +117,29 @@ export default function Products() {
     },
   ];
 
+export default function Products() {
+  const [productList, setProductList] = useState(defaultProducts);
+
+  useEffect(() => {
+    try {
+      const unsubscribe = onSnapshot(collection(db, 'agriProducts'), (snapshot) => {
+        if (!snapshot.empty) {
+          const docs = snapshot.docs.map((doc, idx) => ({
+            id: doc.id,
+            number: String(idx + 1).padStart(2, '0'),
+            ...doc.data()
+          }));
+          setProductList(docs);
+        }
+      }, (error) => {
+        console.warn('Firestore live listener warning, using fallback products:', error);
+      });
+      return () => unsubscribe();
+    } catch (e) {
+      console.warn('Firebase error:', e);
+    }
+  }, []);
+
   return (
     <div style={{ paddingBottom: '7rem' }}>
       {/* ================= HEADER BANNER ================= */}
@@ -164,7 +188,7 @@ export default function Products() {
               flexWrap: 'wrap',
             }}
           >
-            {products.map((p) => (
+            {productList.map((p) => (
               <a
                 key={p.id}
                 href={`#${p.id}`}
@@ -175,7 +199,7 @@ export default function Products() {
                   borderRadius: '9999px',
                 }}
               >
-                <span style={{ color: p.badgeColor, fontWeight: '700' }}>{p.number}.</span> {p.title.split(' ')[0]}
+                <span style={{ color: p.badgeColor, fontWeight: '700' }}>{p.number}.</span> {(p.title || '').split(' ')[0]}
               </a>
             ))}
           </div>
@@ -185,7 +209,7 @@ export default function Products() {
       {/* ================= STACKED PRODUCTS SECTIONS ================= */}
       <section style={{ padding: '4rem 0' }}>
         <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
-          {products.map((item, index) => {
+          {productList.map((item, index) => {
             const isReversed = index % 2 === 1; // Alternating layout for aesthetic flow
 
             return (
