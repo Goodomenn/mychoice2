@@ -101,32 +101,44 @@ export default function Navbar() {
                 alt="MyChoice Ethiopia Agro Logo" 
                 style={{ width: '44px', height: '44px', objectFit: 'contain', flexShrink: 0 }} 
               />
-              <div>
-                <div
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <span
                   style={{
                     fontFamily: 'var(--font-heading)',
-                    fontSize: '1.15rem',
+                    fontSize: '1.1rem',
                     fontWeight: '800',
                     letterSpacing: '0.04em',
                     color: '#ffffff',
-                    lineHeight: '1.2',
-                    whiteSpace: 'nowrap',
+                    lineHeight: '1.15',
                   }}
                 >
-                  MY CHOICE <span style={{ color: '#f59e0b' }}>ETHIOPIA AGRO</span>
-                </div>
-                <div
+                  MY CHOICE
+                </span>
+                <span
                   style={{
-                    fontSize: '0.65rem',
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.0rem',
+                    fontWeight: '800',
+                    letterSpacing: '0.04em',
+                    color: '#f59e0b',
+                    lineHeight: '1.15',
+                  }}
+                >
+                  ETHIOPIA AGRO
+                </span>
+                <span
+                  style={{
+                    fontSize: '0.6rem',
                     color: '#94a3b8',
                     textTransform: 'uppercase',
-                    letterSpacing: '0.12em',
+                    letterSpacing: '0.1em',
                     fontWeight: '600',
+                    marginTop: '0.15rem',
                     whiteSpace: 'nowrap',
                   }}
                 >
                   Import & Export Trading PLC
-                </div>
+                </span>
               </div>
             </Link>
           </div>

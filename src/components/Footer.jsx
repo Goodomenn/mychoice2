@@ -17,52 +17,75 @@ export default function Footer() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-            gap: '3rem',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+            gap: '2.5rem',
           }}
         >
           {/* Col 1: Brand Logo */}
-          <div>
+          <div style={{ minWidth: 0 }}>
             <div
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '0.75rem',
+                gap: '0.85rem',
               }}
             >
               <img 
                 src="/logo.png" 
                 alt="MyChoice Ethiopia Agro Logo" 
-                style={{ width: '44px', height: '44px', objectFit: 'contain', flexShrink: 0 }} 
+                style={{ width: '48px', height: '48px', objectFit: 'contain', flexShrink: 0 }} 
               />
-              <div>
-                <div
+              <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <span
                   style={{
                     fontFamily: 'var(--font-heading)',
                     fontSize: '1.15rem',
                     fontWeight: '800',
                     letterSpacing: '0.04em',
                     color: '#ffffff',
-                    lineHeight: '1.2',
-                    whiteSpace: 'nowrap',
+                    lineHeight: '1.15',
                   }}
                 >
-                  MY CHOICE <span style={{ color: '#f59e0b' }}>ETHIOPIA AGRO</span>
-                </div>
-                <div
+                  MY CHOICE
+                </span>
+                <span
                   style={{
-                    fontSize: '0.65rem',
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.05rem',
+                    fontWeight: '800',
+                    letterSpacing: '0.04em',
+                    color: '#f59e0b',
+                    lineHeight: '1.15',
+                  }}
+                >
+                  ETHIOPIA AGRO
+                </span>
+                <span
+                  style={{
+                    fontSize: '0.62rem',
                     color: '#94a3b8',
                     textTransform: 'uppercase',
-                    letterSpacing: '0.12em',
+                    letterSpacing: '0.1em',
                     fontWeight: '600',
+                    marginTop: '0.2rem',
                     whiteSpace: 'nowrap',
                   }}
                 >
                   Import & Export Trading PLC
-                </div>
+                </span>
               </div>
             </div>
+            <p
+              style={{
+                color: '#94a3b8',
+                fontSize: '0.85rem',
+                lineHeight: '1.6',
+                marginTop: '1rem',
+                maxWidth: '300px',
+              }}
+            >
+              Ethiopia&apos;s origin agricultural commodity export partner, connecting direct farm harvests with global buyers.
+            </p>
           </div>
 
           {/* Col 2: Quick Links */}
