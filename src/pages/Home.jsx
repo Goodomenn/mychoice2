@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Sparkles, 
   ArrowRight, 
   ShieldCheck, 
   Truck, 
@@ -143,12 +142,6 @@ export default function Home() {
 
         <div className="container" style={{ position: 'relative', zIndex: 10 }}>
           <div style={{ maxWidth: '880px', margin: '0 auto', textAlign: 'center' }}>
-            {/* Top Glass Badge */}
-            <div style={{ marginBottom: '1.5rem' }}>
-              <span className="glass-badge">
-                <Sparkles size={15} /> Premier Ethiopian Agricultural Export House
-              </span>
-            </div>
 
             {/* Main Headline */}
             <h1
