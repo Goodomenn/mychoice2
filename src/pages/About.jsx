@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
   ShieldCheck, 
   Target, 
@@ -52,6 +53,11 @@ export default function About() {
 
   return (
     <div style={{ paddingBottom: '6rem' }}>
+      <Helmet>
+        <title>About Us | My Choice Ethiopia Agro</title>
+        <meta name="description" content="Learn about My Choice Ethiopia Agro Trading PLC, our ethical sourcing from Ethiopian farmers, and our commitment to international agricultural export standards." />
+        <link rel="canonical" href="https://www.mychoiceethiopia.com/about" />
+      </Helmet>
       {/* ================= HEADER BANNER ================= */}
       <section
         style={{

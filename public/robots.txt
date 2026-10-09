@@ -1,0 +1,9 @@
+# Robots.txt for MyChoice Ethiopia Agro
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /

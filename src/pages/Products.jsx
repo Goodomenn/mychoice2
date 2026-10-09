@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { collection, onSnapshot } from 'firebase/firestore';
+import { Helmet } from 'react-helmet-async';
 import { db } from '../firebase/config';
 import { 
   ArrowRight, 
@@ -142,6 +143,11 @@ export default function Products() {
 
   return (
     <div style={{ paddingBottom: '7rem' }}>
+      <Helmet>
+        <title>Export Products | Niger Seed, Corn, Cotton, Sorghum | Ethiopia</title>
+        <meta name="description" content="Explore our premium agricultural exports from Ethiopia, including Niger Seed (Nihug), Corn (Maize), Ginned Lint Cotton, Green Gram (Mung Bean), and Highland Sorghum." />
+        <link rel="canonical" href="https://www.mychoiceethiopia.com/products" />
+      </Helmet>
       {/* ================= HEADER BANNER ================= */}
       <section
         style={{

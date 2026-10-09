@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
   MapPin, 
   Phone, 
@@ -57,6 +58,11 @@ export default function Contact() {
 
   return (
     <div style={{ paddingBottom: '6rem' }}>
+      <Helmet>
+        <title>Contact Us | My Choice Ethiopia Agro</title>
+        <meta name="description" content="Contact My Choice Ethiopia Agro Trading PLC for import/export inquiries, trade quotations, and international agricultural sourcing. Located in Addis Ababa, Ethiopia." />
+        <link rel="canonical" href="https://www.mychoiceethiopia.com/contact" />
+      </Helmet>
       {/* ================= HEADER BANNER ================= */}
       <section
         style={{

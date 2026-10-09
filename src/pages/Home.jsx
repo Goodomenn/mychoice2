@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
   ArrowRight, 
   ShieldCheck, 
@@ -101,6 +102,11 @@ export default function Home() {
 
   return (
     <div>
+      <Helmet>
+        <title>Home | My Choice Ethiopia Agro Export</title>
+        <meta name="description" content="Direct source supply of laboratory-graded oilseeds, grain cereals, natural fibers, and protein-rich pulses from Ethiopia. Specializing in niger seed, corn, cotton, green gram, and sorghum." />
+        <link rel="canonical" href="https://www.mychoiceethiopia.com/" />
+      </Helmet>
       {/* ================= HERO SECTION ================= */}
       <section
         style={{
