@@ -1,0 +1,26 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "mychoiceethiopia.vercel.app"
+        }
+      ],
+      "destination": "https://agri.mychoiceethiopia.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "mychoice2.vercel.app"
+        }
+      ],
+      "destination": "https://agri.mychoiceethiopia.com/$1",
+      "permanent": true
+    }
+  ]
+}

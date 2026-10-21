@@ -105,7 +105,7 @@ export default function Home() {
       <Helmet>
         <title>Home | My Choice Ethiopia Agro Export</title>
         <meta name="description" content="Direct source supply of laboratory-graded oilseeds, grain cereals, natural fibers, and protein-rich pulses from Ethiopia. Specializing in niger seed, corn, cotton, green gram, and sorghum." />
-        <link rel="canonical" href="https://www.mychoiceethiopia.com/" />
+        <link rel="canonical" href="https://agri.mychoiceethiopia.com/" />
       </Helmet>
       {/* ================= HERO SECTION ================= */}
       <section

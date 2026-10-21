@@ -146,7 +146,7 @@ export default function Products() {
       <Helmet>
         <title>Export Products | Niger Seed, Corn, Cotton, Sorghum | Ethiopia</title>
         <meta name="description" content="Explore our premium agricultural exports from Ethiopia, including Niger Seed (Nihug), Corn (Maize), Ginned Lint Cotton, Green Gram (Mung Bean), and Highland Sorghum." />
-        <link rel="canonical" href="https://www.mychoiceethiopia.com/products" />
+        <link rel="canonical" href="https://agri.mychoiceethiopia.com/products" />
       </Helmet>
       {/* ================= HEADER BANNER ================= */}
       <section

@@ -56,7 +56,7 @@ export default function About() {
       <Helmet>
         <title>About Us | My Choice Ethiopia Agro</title>
         <meta name="description" content="Learn about My Choice Ethiopia Agro Trading PLC, our ethical sourcing from Ethiopian farmers, and our commitment to international agricultural export standards." />
-        <link rel="canonical" href="https://www.mychoiceethiopia.com/about" />
+        <link rel="canonical" href="https://agri.mychoiceethiopia.com/about" />
       </Helmet>
       {/* ================= HEADER BANNER ================= */}
       <section
